@@ -1,4 +1,4 @@
-package controller;
+package controllers;
 
 import Entities.Hospital;
 import javax.faces.bean.ManagedBean;
@@ -19,11 +19,11 @@ public class HospitalController {
 
     public String prepareToAddNewHospital() {
         current = new Hospital();
-        return "hospital"; // navigate to hospital.xhtml
+        return "hospital"; 
     }
 
     public String saveHospital() {
-        // Save the hospital details logic here
-        return "success"; // navigate to a success page or show a message
+
+        return "success";
     }
 }

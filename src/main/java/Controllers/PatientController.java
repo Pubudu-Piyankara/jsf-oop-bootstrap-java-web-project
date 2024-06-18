@@ -25,12 +25,12 @@ public class PatientController {
 
     public String prepareToAddNewPatient() {
         current = new Patient();
-        return null; // stays on the same page
+        return null;
     }
 
     public String savePatient() {
-        // Implement saving logic here, e.g., call a service to save the patient
-        // patientService.save(current);
-        return "success"; // navigation case to a success page
+        
+        
+        return "success";
     }
 }

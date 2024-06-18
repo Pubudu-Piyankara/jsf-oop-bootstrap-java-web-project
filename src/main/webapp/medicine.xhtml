@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Medicine Management</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+              rel="stylesheet" 
+              integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+              crossorigin="anonymous"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f8f9fa;
+            }
+            .container {
+                max-width: 600px;
+                background: white;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            }
+            .form-control {
+                margin-bottom: 15px;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <h1 class="text-center mb-4">Medicine Management</h1>
+            <p class="text-center text-muted">Add new medicine details below.</p>
+            <h:form>
+                <div class="mb-3">
+                    <h:outputLabel for="medicineName" value="Medicine Name" styleClass="form-label" />
+                    <h:inputText id="medicineName" value="#{medicineController.current.name}" styleClass="form-control" />
+                </div>
+                <div class="mb-3">
+                    <h:outputLabel for="medicineCode" value="Medicine Code" styleClass="form-label" />
+                    <h:inputText id="medicineCode" value="#{medicineController.current.code}" styleClass="form-control" />
+                </div>
+                <div class="mb-3">
+                    <h:outputLabel for="medicineRate" value="Rate" styleClass="form-label" />
+                    <h:inputText id="medicineRate" value="#{medicineController.current.rate}" styleClass="form-control" />
+                </div>
+                <div class="mb-3">
+                    <h:outputLabel for="genericName" value="Generic Name" styleClass="form-label" />
+                    <h:inputText id="genericName" value="#{medicineController.current.genericName}" styleClass="form-control" />
+                </div>
+                <div class="d-grid gap-2 d-md-block">
+                    <h:commandButton value="Set New Medicine" action="#{medicineController.prepareToAddNewMedicine()}" styleClass="btn btn-primary me-2" />
+                    <h:commandButton value="Save" action="#{medicineController.saveMedicine()}" styleClass="btn btn-success" />
+                </div>
+            </h:form>
+        </div>
+    </h:body>
+</html>

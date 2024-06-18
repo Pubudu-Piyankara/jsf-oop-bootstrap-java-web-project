@@ -5,7 +5,7 @@ package Entities;
 public class Institution {
     String name;
     String location;
-    String Address;
+    String ddress;
     int phoneNumber;
 
     public String getName() {
@@ -24,12 +24,12 @@ public class Institution {
         this.location = location;
     }
 
-    public String getAddress() {
-        return Address;
+    public String getDdress() {
+        return ddress;
     }
 
-    public void setAddress(String Address) {
-        this.Address = Address;
+    public void setDdress(String ddress) {
+        this.ddress = ddress;
     }
 
     public int getPhoneNumber() {

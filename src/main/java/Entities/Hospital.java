@@ -2,7 +2,7 @@ package Entities;
 
 public class Hospital extends Institution {
     int numberOfBeds;
-    String type; // e.g., general, specialty, etc.
+    String type; 
 
     public int getNumberOfBeds() {
         return numberOfBeds;
