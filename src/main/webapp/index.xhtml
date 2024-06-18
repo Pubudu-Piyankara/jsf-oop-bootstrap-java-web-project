@@ -33,21 +33,22 @@
         </style>
     </h:head>
     <h:body>
-        <div class="container-fluid text-center content-center .d-block w-auto p-5">
-            <div class="card shadow-sm col w-100 ">
-                <div class="card-body row p-5">
+        <div class="container-fluid text-center d-flex align-items-center justify-content-center">
+            <div class="card shadow-sm col w-100">
+                <div class="card-body">
                     <h1 class="card-title">Welcome to HIMS</h1>
                     <p class="card-text">Hospital Information Management System</p>
                 </div>
-                <div class="row content-center w-100 mx-2 p-5">
-                    <h:form class="row">
-                        <h:commandButton value="Hospitals" action="hospitalList.xhtml" styleClass="btn btn-light my-1 p-2 "/>
-                        <h:commandButton value="Suppliers" action="supplierList.xhtml" styleClass="btn btn-light my-1 p-2"/>
-                        <h:commandButton value="Labs" action="labList.xhtml" styleClass="btn btn-light my-1 p-2"/>
-                        <h:commandButton value="Services" action="serviceList.xhtml" styleClass="btn btn-light my-1 p-2"/>
-                        <h:commandButton value="Medicines" action="medicineList.xhtml" styleClass="btn btn-light my-1 p-2"/>
-                        <h:commandButton value="Investigations" action="investigationList.xhtml" styleClass="btn btn-light my-1 p-2"/>
-                        <h:commandButton value="Patients" action="patientList.xhtml" styleClass="btn btn-light my-1 p-2"/>
+                <div class="d-flex justify-content-center p-3 ">
+                    <h:form>
+                        <div class="btn-group-vertical w-100 ">
+                            <h:commandButton value="Hospitals" action="hospital.xhtml" styleClass="btn btn-light my-1 p-2"/>
+                            
+                            <h:commandButton value="Services" action="serviceList.xhtml" styleClass="btn btn-light my-1 p-2"/>
+                            <h:commandButton value="Medicines" action="medicineList.xhtml" styleClass="btn btn-light my-1 p-2"/>
+                            
+                            <h:commandButton value="Patients" action="patient.xhtml" styleClass="btn btn-light my-1 p-2"/>
+                        </div>
                     </h:form>
                 </div>
             </div>

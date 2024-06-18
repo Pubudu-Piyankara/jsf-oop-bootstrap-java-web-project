@@ -1,11 +1,13 @@
 package Controllers;
 
 import Entities.Patient;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import javax.inject.Named;
+import javax.enterprise.context.Dependent;
 
-@ManagedBean(name = "patientController")
-@ViewScoped
+@Named(value = "patientController")
+
+
+@Dependent
 public class PatientController {
     private Patient current;
 
